@@ -8,7 +8,7 @@ export default function Merchant() {
   const { data: dataCategory } = useQuery(getCategory)
 
   return (
-    <div className="container">
+    <div>
       <div className="flex md:hidden">
         <div className="flex-none my-4 ml-4 bg-input px-2 rounded-l-md">aA</div>
         <div className="flex-1 my-4">
@@ -24,26 +24,6 @@ export default function Merchant() {
           <div>D</div>
           <div>E</div>
           <div>F</div>
-          <div>G</div>
-          <div>H</div>
-          <div>I</div>
-          <div>J</div>
-          <div>K</div>
-          <div>L</div>
-          <div>M</div>
-          <div>N</div>
-          <div>O</div>
-          <div>P</div>
-          <div>Q</div>
-          <div>R</div>
-          <div>S</div>
-          <div>T</div>
-          <div>U</div>
-          <div>V</div>
-          <div>W</div>
-          <div>X</div>
-          <div>Y</div>
-          <div>Z</div>
         </div>
         <div className="flex-1 md:hidden">All Merchant</div>
         <div className="flex-end filter">Filter</div>
@@ -51,7 +31,7 @@ export default function Merchant() {
       <div className="grid relative grid-flow-row auto-rows-max">
         <div className="bg-gradient-to-r from-black to-gray-800">
           <div className="p-4 txt-cat">Category Merchant</div>
-          <div className="grid grid-cols-4 gap-2 m-3">
+          <div className="grid grid-cols-4 gap-2 m-3 text-white text-center object-bottom">
             {dataCategory?.Categories.data.map((category) => {
               return (
                 <div className="h-16 bg-gray-300 rounded-md">{category.name}</div>
@@ -61,7 +41,7 @@ export default function Merchant() {
         </div>
         <div className="flex p-5">
           <div className="hidden md:flex flex-1 bg-list z-10 p-1.5 rounded-lg">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </div>
-          <div className="flex-end ml-6">Filter</div>
+          <div className="flex-end ml-6 hidden md:flex">Filter</div>
         </div>
         <div className="grid grid-flow-row auto-rows-max">
           <h3 className="text-red-500 text-2xl">A</h3>
